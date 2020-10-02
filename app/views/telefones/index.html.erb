@@ -1,0 +1,35 @@
+  <div class="cabecalho">
+    <%= render partial: "/tampletes/menu" %>
+  </div>
+
+
+  <div id="conteudo">
+    <h1 class="titulo">Lista de telefones</h1>
+    <p id="notice"><%= notice %></p>
+    
+     <%= link_to 'Novo Telefone', new_telefone_path, :class => "btn btn-info"  %>
+
+         
+    <table class="table table-striped table-sm" style="margin-top: 5px;">
+      <thead class="thead-dark">
+    <tr>
+      <th>Numero</th>
+      <th>Contato</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @telefones.each do |telefone| %>
+      <tr>
+        <td><%= telefone.numero %></td>
+        <td><%= telefone.contato.nome %></td>
+        <td><%= link_to 'Exibir', telefone %></td>
+        <td><%= link_to 'Editar', edit_telefone_path(telefone) %></td>
+        <td><%= link_to 'Excluir', telefone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+</div>  

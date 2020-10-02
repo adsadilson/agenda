@@ -1,0 +1,27 @@
+
+<dir id="conteudo">
+  <h1>Tipo</h1>
+
+  <%= form_for(@tipo) do |f| %>
+    <% if @tipo.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@tipo.errors.count, "error") %> prohibited this tipo from being saved:</h2>
+
+        <ul>
+        <% @tipo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :descricao %><br>
+      <%= f.text_field :descricao %>
+    </div>
+    <div class="actions">
+      <%= link_to 'Voltar', tipos_path, :class => "btn btn-info"  %>
+      <%= f.submit 'Salvar', :class => "btn btn-success" %>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,41 @@
+<div class="cabecalho">
+      <%= render partial: "/tampletes/menu" %>
+</div>
+
+<div id="conteudo">
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contato:</strong>
+  <%= @endereco.contato.nome %>
+</p>
+
+<p>
+  <strong>Rua:</strong>
+  <%= @endereco.rua %>
+</p>
+
+<p>
+  <strong>Cidade:</strong>
+  <%= @endereco.cidade %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @endereco.bairro %>
+</p>
+
+<p>
+  <strong>Cep:</strong>
+  <%= @endereco.cep %>
+</p>
+
+<p>
+  <strong>Uf:</strong>
+  <%= @endereco.uf %>
+</p>
+
+
+<%= link_to 'Voltar', enderecos_path, :class => "btn btn-info" %>
+
+</div>

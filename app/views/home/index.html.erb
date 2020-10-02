@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<title>Home</title>
+	</head>
+	<body>
+		<div class="cabecalho">
+			<%= render partial: "/tampletes/menu" %>
+		</div>
+		
+		<div id="conteudo">
+			<div class="div01">
+				<%= image_tag("apss.png", :alt => "rss feed") %>
+			</div>
+			<br /><br />
+			<div class="div02">
+				<h2>
+				Seja Bem-vindo ao sistema <span class="text-aqua"> <br /><i>App Carro</i></span>! <br />
+				<span class="small">Utilizando o Ruby on Rails</span>
+				</h2>
+			</div><!-- /.container -->
+		</div><!-- fim conteudo -->
+
+		
+	</body>
+</html>

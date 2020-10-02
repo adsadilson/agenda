@@ -1,0 +1,31 @@
+<div class="cabecalho">
+      <%= render partial: "/tampletes/menu" %>
+</div>
+
+<div id="conteudo">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Nome:</strong>
+	  <%= @contato.nome %>
+	</p>
+
+	<p>
+	  <strong>E-mail:</strong>
+	  <%= @contato.email %>
+	</p>
+
+	<p>
+	  <strong>Tipo:</strong>
+	  <%= @contato.tipo.descricao %>
+	</p>
+
+	<p>
+	  <strong>Obs:</strong>
+	  <%= @contato.obs %>
+	</p>
+
+	<%= link_to 'Voltar', contatos_path, :class => "btn btn-info" %>
+
+</div>
+

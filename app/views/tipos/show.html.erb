@@ -1,0 +1,14 @@
+<div class="cabecalho">
+      <%= render partial: "/tampletes/menu" %>
+</div>
+
+<div id="conteudo">
+	<p id="notice"><%= notice %></p>
+
+	<p>
+	  <strong>Descricao:</strong>
+	  <%= @tipo.descricao %>
+	</p>
+
+	<%= link_to 'Voltar', tipos_path, :class => "btn btn-info" %>
+</div>

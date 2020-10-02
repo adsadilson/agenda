@@ -1,0 +1,48 @@
+
+<dir id="conteudo">
+  <h1>Endereço</h1>
+
+<%= form_for(@endereco) do |f| %>
+  <% if @endereco.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@endereco.errors.count, "error") %> prohibited this endereco from being saved:</h2>
+
+      <ul>
+      <% @endereco.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :cidade %><br>
+    <%= f.text_field :cidade %>
+  </div>
+  <div class="field">
+    <%= f.label :bairro %><br>
+    <%= f.text_field :bairro %>
+  </div>
+  <div class="field">
+    <%= f.label :cep %><br>
+    <%= f.text_field :cep %>
+  </div>
+  <div class="field">
+    <%= f.label :rua %><br>
+    <%= f.text_field :rua %>
+  </div>
+  <div class="field">
+    <%= f.label :uf %><br>
+    <%= f.text_field :uf %>
+  </div>
+  <div class="field">
+    <%= f.label :contato_id %><br>
+    <%= collection_select(:endereco, :contato_id, @listarContatos, :id, :nome) %>
+  </div>
+  <div class="actions">
+    <%= link_to 'Voltar', enderecos_path, :class => "btn btn-info"  %>
+    <%= f.submit "Salvar", :class => "btn btn-success" %>
+  </div>
+<% end %>
+
+</dir>

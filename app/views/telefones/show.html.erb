@@ -1,0 +1,20 @@
+<div class="cabecalho">
+      <%= render partial: "/tampletes/menu" %>
+</div>
+
+<div id="conteudo">
+	<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Numero:</strong>
+  <%= @telefone.numero %>
+</p>
+
+<p>
+  <strong>Contato:</strong>
+  <%= @telefone.contato.nome %>
+</p>
+
+	<%= link_to 'Voltar', telefones_path, :class => "btn btn-info" %>
+
+</div>
